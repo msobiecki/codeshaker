@@ -7,15 +7,20 @@ import Routes from './routes';
 
 import * as serviceWorker from './serviceWorker';
 
-import './assets/styles/main.sass';
-
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
     <Switch>
       {Routes.map((prop, key) => {
-        return <Route path={prop.path} key={key} component={prop.component} />;
+        return (
+          <Route
+            key={key}
+            path={prop.path}
+            name={prop.name}
+            component={prop.component}
+          />
+        );
       })}
     </Switch>
   </Router>,
