@@ -14,7 +14,7 @@ class Section extends Component {
     const { data, theme } = this.props;
     return (
       <Fragment>
-        <StyledSection theme={theme.section}>
+        <StyledSection theme={theme}>
           <StyledContainer>
             {data.category && data.category.name && (
               <StyledCategory theme={theme.category}>

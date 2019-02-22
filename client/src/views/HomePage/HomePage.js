@@ -22,7 +22,6 @@ const getSectionsQuery = gql`
 class HomePage extends Component {
   render() {
     const { data, theme } = this.props;
-    console.log(this.props);
     return (
       <Fragment>
         {data.loading ? (
@@ -36,7 +35,11 @@ class HomePage extends Component {
         ) : (
           data.sections &&
           data.sections.map((section, key) => (
-            <Section key={key} data={section} theme={theme['base'].section} />
+            <Section
+              key={key}
+              data={section}
+              theme={theme['base'].public.section}
+            />
           ))
         )}
       </Fragment>

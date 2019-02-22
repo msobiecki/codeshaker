@@ -3,34 +3,52 @@ import { Colors } from './Variables.style';
 
 const { ThemeProvider, withTheme } = createTheming({
   base: {
-    section: {
+    public: {
       section: {
-        background: Colors.white
-      },
-      category: {
-        color: Colors.violet
-      },
-      title: {
-        color: Colors.black
-      },
-      content: {
-        color: Colors.grey
+        background: Colors.white,
+        category: {
+          color: Colors.violet
+        },
+        title: {
+          color: Colors.black
+        },
+        content: {
+          color: Colors.grey
+        }
+      }
+    },
+    admin: {
+      panel: {
+        background: Colors.white,
+        navigation: {},
+        content: {},
+        footer: {}
       }
     }
   },
   aztec: {
-    section: {
+    public: {
       section: {
-        background: Colors.white
-      },
-      category: {
-        color: Colors.green
-      },
-      title: {
-        color: Colors.black
-      },
-      content: {
-        color: Colors.grey
+        section: {
+          background: Colors.white
+        },
+        category: {
+          color: Colors.green
+        },
+        title: {
+          color: Colors.black
+        },
+        content: {
+          color: Colors.grey
+        }
+      }
+    },
+    admin: {
+      panel: {
+        background: Colors.white,
+        navigation: {},
+        content: {},
+        footer: {}
       }
     }
   }
