@@ -2,6 +2,7 @@ const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const { MemcachedCache } = require('apollo-server-cache-memcached');
 const path = require('path');
+const cors = require('cors');
 
 // Set our schema
 const schema = require('./server/schema');
@@ -28,8 +29,11 @@ const server = new ApolloServer({
 // Set up the express app
 const app = express();
 
+// CORS
+app.use(cors());
+
 // Set up middleware
-server.applyMiddleware({ app });
+server.applyMiddleware({ app, path: '/graphql' });
 
 // // Connect our schema to our application
 // app.use('/graphql', graphqlHTTP({ schema, graphiql: true }));
