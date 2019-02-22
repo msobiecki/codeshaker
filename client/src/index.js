@@ -7,6 +7,9 @@ import * as serviceWorker from './serviceWorker';
 
 import System from './System';
 
+import './assets/styles/reset.css';
+import './assets/styles/base.css';
+
 const history = createBrowserHistory();
 
 ReactDOM.render(

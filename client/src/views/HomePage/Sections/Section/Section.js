@@ -1,12 +1,36 @@
 import React, { Component, Fragment } from 'react';
 
+import {
+  Section as StyledSection,
+  Container as StyledContainer,
+  Category as StyledCategory,
+  Title as StyledTitle,
+  Content as StyledContent
+} from './Section.style';
+
 class Section extends Component {
   render() {
-    const { data } = this.props;
+    console.log(this.props);
+    const { data, theme } = this.props;
     return (
       <Fragment>
-        {data.title && <div>{data.title}</div>}
-        {data.content && <div>{data.content}</div>}
+        <StyledSection theme={theme.section}>
+          <StyledContainer>
+            {data.category && data.category.name && (
+              <StyledCategory theme={theme.category}>
+                {data.category.name}
+              </StyledCategory>
+            )}
+            {data.title && (
+              <StyledTitle theme={theme.title}>{data.title}</StyledTitle>
+            )}
+            {data.content && (
+              <StyledContent theme={theme.content}>
+                {data.content}
+              </StyledContent>
+            )}
+          </StyledContainer>
+        </StyledSection>
       </Fragment>
     );
   }

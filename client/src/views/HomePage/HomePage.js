@@ -12,27 +12,33 @@ const getSectionsQuery = gql`
       id
       title
       content
+      category {
+        name
+      }
     }
   }
 `;
 
 class HomePage extends Component {
   render() {
-    const { data } = this.props;
+    const { data, theme } = this.props;
     console.log(this.props);
     return (
       <Fragment>
         {data.loading ? (
-          <div>LOADING</div>
+          <div>
+            <i class="material-icons">watch_later</i> LOADING
+          </div>
         ) : data.error ? (
-          <div>ERROR</div>
+          <div>
+            <i class="material-icons">error</i> ERROR
+          </div>
         ) : (
           data.sections &&
           data.sections.map((section, key) => (
-            <Section key={key} data={section} />
+            <Section key={key} data={section} theme={theme['base'].section} />
           ))
         )}
-        {/* <Footer theme={this.props.theme['base'].footer} /> */}
       </Fragment>
     );
   }
