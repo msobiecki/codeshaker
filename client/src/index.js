@@ -1,28 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
-import { Router, Route, Switch } from 'react-router-dom';
-
-import Routes from './routes';
+import { Router } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
+
+import System from './System';
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
-    <Switch>
-      {Routes.map((prop, key) => {
-        return (
-          <Route
-            key={key}
-            path={prop.path}
-            name={prop.name}
-            component={prop.component}
-          />
-        );
-      })}
-    </Switch>
+    <System />
   </Router>,
   document.getElementById('root')
 );

@@ -1,0 +1,30 @@
+{
+  "name": "codeshaker",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "",
+  "author": "CODESHAKER Michał Sobiecki <kontakt@codeshaker.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-boost": "^0.1.28",
+    "apollo-server-express": "^2.4.6",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.11",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0"
+  },
+  "scripts": {
+    "start": "node ./server/bin/www",
+    "dev": "nodemon ./server/bin/www"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.4.0"
+  }
+}
