@@ -4,12 +4,17 @@ module.exports = (sequelize, DataTypes) => {
     'Section',
     {
       title: DataTypes.TEXT,
-      content: DataTypes.TEXT
+      content: DataTypes.TEXT,
+      categoryId: DataTypes.INTEGER
     },
     {}
   );
   Section.associate = function(models) {
-    Section.belongsTo(models.Category);
+    Section.belongsTo(models.Category, {
+      sourceKey: 'id',
+      foreignKey: 'categoryId',
+      as: 'category'
+    });
   };
   return Section;
 };

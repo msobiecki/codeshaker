@@ -8,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Category.associate = function(models) {
-    Category.hasMany(models.Section);
+    Category.hasMany(models.Section, {
+      sourceKey: 'id',
+      foreignKey: 'categoryId',
+      as: 'sections'
+    });
   };
   return Category;
 };
