@@ -1,7 +1,6 @@
 {
   "development": {
-    "host": "127.0.0.1",
-    "port": 8000,
+    "host": "http://127.0.0.1:8000/graphql",
     "type": "application/json",
     "route": "api"
   }

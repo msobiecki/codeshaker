@@ -1,17 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo';
 
 import { withTheme } from './../../assets/styles/Theme.style';
 
-import Footer from '../../common/Footer/Footer';
+import Section from './Sections/Section/Section';
+
+const getSectionsQuery = gql`
+  {
+    sections {
+      id
+      title
+      content
+    }
+  }
+`;
 
 class HomePage extends Component {
   render() {
+    const { data } = this.props;
+    console.log(this.props);
     return (
-      <div>
-        <Footer theme={this.props.theme['base'].footer} />
-      </div>
+      <Fragment>
+        {data.loading ? (
+          <div>LOADING</div>
+        ) : data.error ? (
+          <div>ERROR</div>
+        ) : (
+          data.sections &&
+          data.sections.map((section, key) => (
+            <Section key={key} data={section} />
+          ))
+        )}
+        {/* <Footer theme={this.props.theme['base'].footer} /> */}
+      </Fragment>
     );
   }
 }
 
-export default withTheme(HomePage);
+export default graphql(getSectionsQuery)(withTheme(HomePage));
