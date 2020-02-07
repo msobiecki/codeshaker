@@ -1,3 +1,3 @@
-# codeshaker
+# Codeshaker
 
 🥤 Codeshaker, content management system
