@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useWindowWidth } from "@react-hook/window-size"
 
@@ -60,9 +60,9 @@ const Services = () => {
           return currentState
         }, {})
       ).map((column, columnIndex) => (
-        <Column>
+        <Column key={columnIndex}>
           {column.map((service, serviceIndex) => (
-            <>
+            <Fragment key={`${columnIndex}-${serviceIndex}`}>
               <Title
                 initial={
                   windowWidth < Breakpoints.lg
@@ -82,8 +82,9 @@ const Services = () => {
                 {service.title}
               </Title>
               <Items>
-                {service.items.map((item) => (
+                {service.items.map((item, itemIndex) => (
                   <Item
+                    key={`${columnIndex}-${serviceIndex}-${itemIndex}`}
                     initial={
                       windowWidth < Breakpoints.lg
                         ? { opacity: 0, scale: 0 }
@@ -109,7 +110,7 @@ const Services = () => {
                   </Item>
                 ))}
               </Items>
-            </>
+            </Fragment>
           ))}
         </Column>
       ))}

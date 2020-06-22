@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-import { Media } from "../../assets/mixins"
+import { Media, rgba } from "../../assets/mixins"
 import { Colors } from "../../assets/variables"
 
 export const Box = styled.div`
@@ -51,6 +51,7 @@ export const TitleHolder = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
+  margin-left: 60px;
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -58,6 +59,7 @@ export const TitleHolder = styled.div`
     position: initial;
     top: initial;
     left: initial;
+    margin-left: initial;
     transform: initial;
     z-index: initial;
   `}
@@ -110,7 +112,8 @@ export const Item = styled.div`
   width: 100%;
   height: 100vh;
   padding-left: 50%;
-  background: ${Colors.gallery};
+  background: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : Colors.gallery};
 
   ${Media.lg`
     padding-left: 0;
@@ -124,8 +127,59 @@ export const ItemInner = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 2;
 `
+
 export const Grow = styled.div`
   flex-grow: 1;
+`
+
+export const ItemInnerContent = styled.div`
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transform: translateY(-50%);
+  width: 50%;
+  max-height: 50%;
+  margin: auto;
+  padding: 25px;
+  background: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : Colors.gallery};
+  box-shadow: 0 0 2px 0 ${rgba(Colors.mineShaft, 0.08)};
+  z-index: 2;
+`
+
+export const ItemInnerTitle = styled.h3`
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+`
+
+export const ItemInnerLead = styled.h4`
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.4;
+  user-select: none;
+  cursor: default;
+`
+
+export const ItemTags = styled.div`
+  right: 5px;
+  bottom: 5px;
+  padding: 5px;
+  background: ${rgba(Colors.mineShaft, 0.5)};
+  color: ${Colors.white};
+  font-size: 0.65rem;
+  font-style: italic;
+  text-align: center;
+  cursor: default;
 `
