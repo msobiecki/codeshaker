@@ -19,6 +19,6 @@ const Footer = ({ footer }) => {
 
 export default Footer
 
-Folios.propTypes = {
+Footer.propTypes = {
   footer: PropTypes.object,
 }
