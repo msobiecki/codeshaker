@@ -25,6 +25,8 @@ export const query = graphql`
         title
         description
         keywords
+        author
+        href
       }
     }
     content {

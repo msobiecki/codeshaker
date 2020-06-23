@@ -11,8 +11,10 @@ module.exports = {
     description: `Custom software development company specializing in web applications, mobile applications and more.`,
     keywords: ``,
     author: `kontakt@codeshaker.pl`,
+    href: `https://codeshaker.pl`,
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -86,7 +88,7 @@ module.exports = {
         // language file path
         defaultLanguage: `pl`,
         // option to redirect to `/pl` when connecting `/`
-        redirect: true,
+        redirect: false,
       },
     },
   ],

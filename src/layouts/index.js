@@ -1,29 +1,35 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
+import FAVICON from "../data/images/favicon.png"
 
-const Layout = ({ children, data }) => (
-  <>
-    <Helmet
-      title={data.title}
-      meta={[
-        { name: "description", content: data.description },
-        { name: "keywords", content: data.keywords },
-        { name: "author", content: data.author },
-        { name: "og:title", content: data.title },
-        { name: "og:description", content: data.description },
-        { name: "canonical", content: "https://codeshaker.pl/" },
-        { name: "og:url", content: "https://codeshaker.pl/" },
-        {
-          name: "og:image",
-          content:
-            "https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-9/45803453_548528595618645_6396031302537052160_n.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=HfdbknzKkjEAX-RggBA&_nc_ht=scontent.fwaw5-1.fna&oh=b51e7c78b7125766b77835029ae1eb83&oe=5F18BAED",
-        },
-      ]}
-    />
-    {children}
-  </>
-)
+const Layout = ({ children, data }) => {
+  const intl = useIntl()
+
+  return (
+    <>
+      <Helmet title={data.title}>
+        <html lang={intl.locale} />
+        <link rel="canonical" href={data.href} />
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords} />
+        <meta name="author" content={data.author} />
+        <meta property="og:title" content={data.title} />
+        <meta property="og:description" content={data.description} />
+        <meta property="og:url" content={data.href} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={intl.locale} />
+        <meta property="og:site_name" content={data.title} />
+        <meta property="og:image" content={`${data.href}${FAVICON}`} />
+        <meta property="og:image:alt" content={data.title} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+      </Helmet>
+      {children}
+    </>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.object,
