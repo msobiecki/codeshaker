@@ -2,7 +2,7 @@
 type: "folio"
 order: 1
 title: "I specialize mainly in JavaScript-based technologies."
-lead: "The web applications I create are based on the JavaScript programming language. I always try to follow trends and based on current solutions. That is why I will implement your web applications using the ReactJS library, which is used to build user interfaces based on the SPA approach."
+lead: "However, I try to support digital​ business in every way. Check my technology stack to see that I will ensure your business success."
 background_color: "#ECE9E2"
 background_image: "../images/folio-1.jpg"
 is_background_image: true

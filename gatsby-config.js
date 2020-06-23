@@ -69,5 +69,25 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-145172403-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `pl`],
+        // language file path
+        defaultLanguage: `pl`,
+        // option to redirect to `/pl` when connecting `/`
+        redirect: true,
+      },
+    },
   ],
 }

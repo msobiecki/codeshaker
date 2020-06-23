@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import { useWindowWidth } from "@react-hook/window-size"
 
@@ -6,7 +7,11 @@ import { Breakpoints } from "../../assets/variables"
 
 import { Box, Column, Title, Items, Item, NativeLink } from "./services.style"
 
+import ICON_FACEBOOK from "../../data/images/social-facebook.svg"
+import ICON_LINKEDIN from "../../data/images/social-linkedin.svg"
+
 const Services = () => {
+  const intl = useIntl()
   const windowWidth = useWindowWidth()
 
   const data = [
@@ -47,6 +52,19 @@ const Services = () => {
           text: "+48 506 500 145",
           link: "tel:+48506500145",
         },
+        {
+          type: "social",
+          items: [
+            {
+              text: "facebook",
+              link: "https://www.facebook.com/CODESHAKERpl",
+            },
+            {
+              text: "linkedin",
+              link: "https://www.linkedin.com/company/codeshakerpl",
+            },
+          ],
+        },
       ],
     },
   ]
@@ -79,7 +97,10 @@ const Services = () => {
                   delay: 1.2 + columnIndex * 0.5 + serviceIndex * 0.25,
                 }}
               >
-                {service.title}
+                {intl.formatMessage({
+                  id: service.title.split(" ").join("_").toUpperCase(),
+                  defaultMessage: service.title,
+                })}
               </Title>
               <Items>
                 {service.items.map((item, itemIndex) => (
@@ -100,12 +121,37 @@ const Services = () => {
                       delay: 1.4 + columnIndex * 0.5 + serviceIndex * 0.25,
                     }}
                   >
-                    {item.link ? (
-                      <NativeLink type={item.type} href={item.link}>
-                        {item.text}
-                      </NativeLink>
+                    {item.type === "social" ? (
+                      item.items.map((social) =>
+                        social.text === "facebook" ? (
+                          <NativeLink
+                            key={social.text}
+                            href={social.link}
+                            rel="nofollow"
+                            target="_blank"
+                          >
+                            <img src={ICON_FACEBOOK} alt="Facebook" />
+                          </NativeLink>
+                        ) : social.text === "linkedin" ? (
+                          <NativeLink
+                            key={social.text}
+                            href={social.link}
+                            rel="nofollow"
+                            target="_blank"
+                          >
+                            <img src={ICON_LINKEDIN} alt="Linkedin" />
+                          </NativeLink>
+                        ) : (
+                          ""
+                        )
+                      )
+                    ) : item.link ? (
+                      <NativeLink href={item.link}>{item.text}</NativeLink>
                     ) : (
-                      item.text
+                      intl.formatMessage({
+                        id: item.text.split(" ").join("_").toUpperCase(),
+                        defaultMessage: item.text,
+                      })
                     )}
                   </Item>
                 ))}

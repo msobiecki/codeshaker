@@ -1,4 +1,5 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import { useWindowWidth } from "@react-hook/window-size"
 import Img from "gatsby-image"
@@ -26,7 +27,9 @@ import {
 } from "./folios.style"
 
 const Folios = ({ content, folios }) => {
+  const intl = useIntl()
   const windowWidth = useWindowWidth()
+
   return (
     <Box>
       <Curtain
@@ -43,7 +46,10 @@ const Folios = ({ content, folios }) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6, ease: "easeInOut" }}
             >
-              {content.title}
+              {intl.formatMessage({
+                id: content.title.split(" ").join("_").toUpperCase(),
+                defaultMessage: content.title,
+              })}
             </Title>
           </TitleHolder>
           <Lead
@@ -59,7 +65,10 @@ const Folios = ({ content, folios }) => {
             }
             transition={{ duration: 0.4, delay: 1 }}
           >
-            {content.lead}
+            {intl.formatMessage({
+              id: content.lead.split(" ").join("_").toUpperCase(),
+              defaultMessage: content.lead,
+            })}
           </Lead>
           <Grow />
           <Services />
@@ -92,8 +101,24 @@ const Folios = ({ content, folios }) => {
                   <ItemInnerContent
                     backgroundColor={folio.frontmatter.content_background_color}
                   >
-                    <ItemInnerTitle>{folio.frontmatter.title}</ItemInnerTitle>
-                    <ItemInnerLead>{folio.frontmatter.lead}</ItemInnerLead>
+                    <ItemInnerTitle>
+                      {intl.formatMessage({
+                        id: folio.frontmatter.title
+                          .split(" ")
+                          .join("_")
+                          .toUpperCase(),
+                        defaultMessage: folio.frontmatter.title,
+                      })}
+                    </ItemInnerTitle>
+                    <ItemInnerLead>
+                      {intl.formatMessage({
+                        id: folio.frontmatter.lead
+                          .split(" ")
+                          .join("_")
+                          .toUpperCase(),
+                        defaultMessage: folio.frontmatter.lead,
+                      })}
+                    </ItemInnerLead>
                     {folio.frontmatter.tags &&
                       folio.frontmatter.tags.length > 0 && (
                         <ItemTags>
