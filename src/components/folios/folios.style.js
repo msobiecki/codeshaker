@@ -142,7 +142,6 @@ export const ItemInnerContent = styled.div`
   justify-content: flex-start;
   transform: translateY(-50%);
   width: 50%;
-  max-height: 50%;
   margin: auto;
   padding: 25px;
   background: ${(props) =>
@@ -150,10 +149,13 @@ export const ItemInnerContent = styled.div`
   box-shadow: 0 0 2px 0 ${rgba(Colors.mineShaft, 0.08)};
   z-index: 2;
 
+  ${Media.xlg`
+    width: 75%
+  `}
+
   ${Media.sm`
     top: 50%;
     width: 90%;
-    max-height: initial;
   `}
 `
 

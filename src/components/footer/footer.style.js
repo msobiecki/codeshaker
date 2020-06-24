@@ -3,24 +3,58 @@ import styled from "styled-components"
 import { Media, rgba } from "../../assets/mixins"
 import { Colors } from "../../assets/variables"
 
-export const Wrapper = styled.footer`
+export const Wrapper = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-left: 50%;
+  background: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : Colors.gallery};
+
+  ${Media.lg`
+    padding-left: 0;
+  `}
+
+  ${Media.sm`
+    height: auto;
+  `}
+`
+
+export const WrapperInner = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  ${Media.sm`
+    height: auto;
+  `}
+`
+
+export const Content = styled.footer`
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 50%;
-  max-height: 50%;
   margin: auto;
   padding: 25px;
   background: ${Colors.white};
   box-shadow: 0 0 2px 0 ${rgba(Colors.mineShaft, 0.08)};
   z-index: 2;
 
+  ${Media.xlg`
+    width: 75%
+  `}
+
   ${Media.sm`
-    top: 50%;
-    width: 90%;
-    max-height: initial;
+    position: relative;
+    top: initial;
+    width: 100%;
   `}
 `
 export const Title = styled.h3`

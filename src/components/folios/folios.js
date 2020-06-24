@@ -131,11 +131,7 @@ const Folios = ({ content, folios }) => {
                 </ItemInner>
               </Item>
             ))}
-        <Item>
-          <ItemInner>
-            <Footer footer={content.footer} />
-          </ItemInner>
-        </Item>
+        <Footer footer={content.footer} />
       </Main>
     </Box>
   )

@@ -28,17 +28,19 @@ export const Wrapper = styled.footer`
   align-items: center;
   justify-content: flex-start;
   width: 50%;
-  max-height: 50%;
   margin: auto;
   padding: 25px;
   background: ${Colors.white};
   box-shadow: 0 0 2px 0 ${rgba(Colors.mineShaft, 0.08)};
   z-index: 2;
 
+  ${Media.xlg`
+    width: 75%
+  `}
+
   ${Media.sm`
     top: 50%;
     width: 90%;
-    max-height: initial;
   `}
 `
 export const Title = styled.h3`
