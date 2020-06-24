@@ -57,4 +57,9 @@ export const Item = styled(motion.li)`
 export const NativeLink = styled.a`
   background: none;
   color: ${Colors.mineShaft};
+  transition: 0.2s all;
+
+  &:hover {
+    color: ${Colors.mountainMeadow};
+  }
 `

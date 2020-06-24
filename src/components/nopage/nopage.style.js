@@ -1,7 +1,25 @@
 import styled from "styled-components"
+import { Link as GatsbyLink } from "gatsby"
 
 import { Media, rgba } from "../../assets/mixins"
 import { Colors } from "../../assets/variables"
+
+export const Box = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: ${Colors.gallery};
+`
+
+export const BoxInner = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`
 
 export const Wrapper = styled.footer`
   position: absolute;
@@ -55,10 +73,9 @@ export const Lead = styled.h5`
   cursor: default;
 `
 
-export const Link = styled.a`
+export const Link = styled(GatsbyLink)`
   margin-top: 5px;
   margin-bottom: 5px;
-  background: none;
   background: none;
   color: ${Colors.mineShaft};
   transition: 0.2s all;

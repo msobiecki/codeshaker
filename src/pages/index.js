@@ -5,9 +5,11 @@ import { graphql } from "gatsby"
 import Layout from "../layouts"
 
 import Folios from "../components/folios"
+import Seo from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout data={data.site.siteMetadata}>
+  <Layout>
+    <Seo title={"Homepage"} />
     <Folios content={data.content} folios={data.allMarkdownRemark.nodes} />
   </Layout>
 )
@@ -20,15 +22,6 @@ IndexPage.propTypes = {
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-        description
-        keywords
-        author
-        href
-      }
-    }
     content {
       title
       lead

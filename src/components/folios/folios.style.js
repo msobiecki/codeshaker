@@ -149,6 +149,12 @@ export const ItemInnerContent = styled.div`
     props.backgroundColor ? props.backgroundColor : Colors.gallery};
   box-shadow: 0 0 2px 0 ${rgba(Colors.mineShaft, 0.08)};
   z-index: 2;
+
+  ${Media.sm`
+    top: 50%;
+    width: 90%;
+    max-height: initial;
+  `}
 `
 
 export const ItemInnerTitle = styled.h3`

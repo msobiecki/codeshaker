@@ -9,7 +9,11 @@ const Footer = ({ footer }) => {
 
   return (
     <Wrapper>
-      <Emoji>{footer.emoji}</Emoji>
+      <Emoji>
+        <span role="img" aria-label="emoji">
+          {footer.emoji}
+        </span>
+      </Emoji>
       <Lead>
         {intl.formatMessage({
           id: footer.lead.split(" ").join("_").toUpperCase(),

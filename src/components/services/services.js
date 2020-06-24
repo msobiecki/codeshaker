@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import { useIntl } from "gatsby-plugin-intl"
-import PropTypes from "prop-types"
 import { useWindowWidth } from "@react-hook/window-size"
 
 import { Breakpoints } from "../../assets/variables"
@@ -127,7 +126,7 @@ const Services = () => {
                           <NativeLink
                             key={social.text}
                             href={social.link}
-                            rel="nofollow"
+                            rel="noopener"
                             target="_blank"
                           >
                             <img src={ICON_FACEBOOK} alt="Facebook" />
@@ -136,7 +135,7 @@ const Services = () => {
                           <NativeLink
                             key={social.text}
                             href={social.link}
-                            rel="nofollow"
+                            rel="noopener"
                             target="_blank"
                           >
                             <img src={ICON_LINKEDIN} alt="Linkedin" />

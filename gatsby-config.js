@@ -7,11 +7,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Custom Software Development | CODESHAKER`,
+    title: `Custom Software Development - CODESHAKER`,
     description: `Custom software development company specializing in web applications, mobile applications and more.`,
-    keywords: ``,
     author: `kontakt@codeshaker.pl`,
-    href: `https://codeshaker.pl`,
+    siteUrl: 'https://codeshaker.pl'
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -91,5 +90,7 @@ module.exports = {
         redirect: false,
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-robots-txt`
   ],
 }

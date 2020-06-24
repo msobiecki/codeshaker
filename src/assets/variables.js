@@ -12,4 +12,5 @@ export const Colors = {
   gallery: "#eee",
   mineShaft: "#383838",
   codGray: "#1e1e1e",
+  mountainMeadow: "#1ca086",
 }
