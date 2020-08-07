@@ -1,6 +1,6 @@
 ### Hi there, I'm Mike - self-employed developer in [CODESHAKER][companyWebsite] 🥤 [<img alt="CODESHAKER | Website" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][companyWebsite] [<img alt="CODESHAKER | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][companyLinkedin] [<img alt="CODESHAKER | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][companyFacebook]
 
-### Connect with me:
+### 🙋‍♂️ Connect with me:
 
 [<img alt="SaliMike | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][privateLinkedin]
 [<img alt="SaliMike | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][privateFacebook]
