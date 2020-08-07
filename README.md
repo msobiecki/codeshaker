@@ -1,3 +1,3 @@
 # Codeshaker
 
-🥤 Codeshaker, content management system
+🥤 Codeshaker, static gatsby website
