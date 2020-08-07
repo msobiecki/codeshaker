@@ -1,10 +1,10 @@
-### Hi there, I'm Mike - self-employed developer in [CODESHAKER][companyWebsite] 🥤 [<img alt="CODESHAKER | Website" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][companyWebsite] [<img alt="CODESHAKER | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][companyLinkedin] [<img alt="CODESHAKER | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][companyFacebook]
+### Hi there, I'm Mike - self-employed developer in [CODESHAKER][companywebsite] 🥤 [<img alt="CODESHAKER | Website" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][companywebsite] [<img alt="CODESHAKER | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][companylinkedin] [<img alt="CODESHAKER | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][companyfacebook]
 
 ### 🙋‍♂️ Connect with me:
 
-[<img alt="SaliMike | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][privateLinkedin]
-[<img alt="SaliMike | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][privateFacebook]
-[<img alt="SaliMike | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][privateInstagram]
+[<img align="left" alt="SaliMike | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][privatelinkedin]
+[<img align="left" alt="SaliMike | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />][privatefacebook]
+[<img align="left" alt="SaliMike | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][privateinstagram]
 
 <br />
 
@@ -52,10 +52,9 @@
 
 <img alt="SaliMIke's Github Stats" src="https://github-readme-stats.vercel.app/api?username=salimike&show_icons=true&hide_border=true" />
 
-[companyWebsite]: https://codeshaker.pl
-[companyFacebook]: https://www.facebook.com/CODESHAKERpl
-[companyLinkedin]: https://www.linkedin.com/company/codeshakerpl
-
-[privateLinkedin]: https://www.linkedin.com/in/msobiecki
-[privateFacebook]: https://www.facebook.com/ToChybaOn
-[privateInstagram]: https://www.instagram.com/salimike_
+[companywebsite]: https://codeshaker.pl
+[companyfacebook]: https://www.facebook.com/CODESHAKERpl
+[companylinkedin]: https://www.linkedin.com/company/codeshakerpl
+[privatelinkedin]: https://www.linkedin.com/in/msobiecki
+[privatefacebook]: https://www.facebook.com/ToChybaOn
+[privateinstagram]: https://www.instagram.com/salimike_
